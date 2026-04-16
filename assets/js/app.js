@@ -1,6 +1,5 @@
 (function () {
   'use strict';
-  var isStaticHosting = /\.github\.io$/i.test(window.location.hostname);
 
   var root = document.documentElement;
   var stored = localStorage.getItem('theme');
@@ -49,10 +48,6 @@
       e.preventDefault();
       var fd = new FormData(nf);
       var msg = document.getElementById('newsletter-msg');
-      if (isStaticHosting || /\.php($|\?)/i.test(nf.action || '')) {
-        msg.textContent = 'Mode statis: form aktif saat dihosting PHP.';
-        return;
-      }
       msg.textContent = 'Mengirim…';
       fetch(nf.action, { method: 'POST', body: fd, credentials: 'same-origin' })
         .then(function (r) {
@@ -73,10 +68,6 @@
     cf.addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = document.getElementById('contact-msg');
-      if (isStaticHosting || /\.php($|\?)/i.test(cf.action || '')) {
-        msg.textContent = 'Mode statis: form aktif saat dihosting PHP.';
-        return;
-      }
       msg.textContent = 'Mengirim…';
       var fd = new FormData(cf);
       fetch(cf.action, { method: 'POST', body: fd, credentials: 'same-origin' })
@@ -106,10 +97,6 @@
         return;
       }
       searchTimer = setTimeout(function () {
-        if (isStaticHosting) {
-          liveBox.classList.remove('is-visible');
-          return;
-        }
         fetch(apiUrl('api/search.php?q=' + encodeURIComponent(q)), { credentials: 'same-origin' })
           .then(function (r) {
             return r.json();
@@ -137,7 +124,6 @@
   var loadMore = document.getElementById('load-more-articles');
   if (loadMore) {
     loadMore.addEventListener('click', function () {
-      if (isStaticHosting) return;
       var page = parseInt(loadMore.getAttribute('data-page'), 10) || 1;
       var next = page + 1;
       var qs = loadMore.getAttribute('data-query') || '';
@@ -202,7 +188,6 @@
   var btnLike = document.getElementById('btn-like');
   if (btnLike) {
     btnLike.addEventListener('click', function () {
-      if (isStaticHosting) return;
       var id = parseInt(btnLike.getAttribute('data-article'), 10);
       postJson(apiUrl('api/toggle-like.php'), { article_id: id }).then(function (data) {
         if (!data.ok) return;
@@ -218,7 +203,6 @@
   var btnBm = document.getElementById('btn-bookmark');
   if (btnBm) {
     btnBm.addEventListener('click', function () {
-      if (isStaticHosting) return;
       var id = parseInt(btnBm.getAttribute('data-article'), 10);
       postJson(apiUrl('api/toggle-bookmark.php'), { article_id: id }).then(function (data) {
         if (!data.ok) return;
@@ -246,10 +230,6 @@
     cform.addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = document.getElementById('comment-msg');
-      if (isStaticHosting) {
-        msg.textContent = 'Mode statis: komentar aktif saat dihosting PHP.';
-        return;
-      }
       msg.textContent = 'Mengirim…';
       var fd = new FormData(cform);
       fetch(apiUrl('api/comment.php'), { method: 'POST', body: fd, credentials: 'same-origin' })
