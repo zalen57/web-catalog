@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda — Web Catalog</title>
+  <meta name="description" content="Blog teknologi modern: AI, programming, gadget, keamanan siber, dan startup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">TB</span><span class="logo-text">TechBlog</span></a>
+      <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Utama">
+        <a href="index.html">Beranda</a>
+        <a href="articles.html">Artikel</a>
+        <a href="category.html">Kategori</a>
+        <a href="about.html">Tentang &amp; Kontak</a>
+        <span id="auth-links"></span>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Mode gelap/terang">
+          <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1z"/></svg>
+          <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero"><div class="container hero-grid"><div><h1>Wawasan Teknologi untuk Hari Ini</h1><p class="hero-lead">Eksplorasi AI, pengembangan software, gadget, keamanan siber, dan startup.</p><a class="btn" href="articles.html">Jelajahi artikel</a></div><div class="hero-visual"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&h=560&fit=crop" alt="" loading="lazy"></div></div></section>
+    <section class="section"><div class="container"><div class="section-head"><h2>Artikel unggulan</h2><a class="btn btn-outline btn-sm" href="articles.html">Lihat semua</a></div><div class="card-grid" id="featured-grid"></div></div></section>
+    <section class="section" style="padding-top:0"><div class="container"><div class="section-head"><h2>Kategori populer</h2></div><div class="cat-pills" id="cat-pills"></div></div></section>
+    <section class="section"><div class="container"><div class="section-head"><h2>Trending</h2><span class="muted">Berdasarkan jumlah tayangan</span></div><ol style="margin:0;padding-left:1.25rem;max-width:640px" id="trending-list"></ol></div></section>
+    <section class="section"><div class="container"><div class="section-head"><h2>Artikel terbaru</h2></div><div class="card-grid" id="latest-grid"></div></div></section>
+    <section class="section"><div class="container"><div class="newsletter"><h2>Newsletter</h2><p>Dapatkan ringkasan artikel terbaru langsung ke akun user Anda. Tanpa spam.</p><form class="newsletter-form" id="newsletter-form"><input type="text" name="user" required placeholder="username_anda"><button type="submit" class="btn">Berlangganan</button></form><p id="newsletter-msg" class="muted" style="margin-top:0.75rem;font-size:0.9rem"></p></div></div></section>
+    <p id="page-error" class="container muted"></p>
+  </main>
+  <footer class="site-footer"><div class="container" style="padding:2rem 0"><p class="muted" style="margin:0">TechBlog versi statis untuk GitHub Pages.</p></div></footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/static-site.js"></script>
+</body>
+</html>

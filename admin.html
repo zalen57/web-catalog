@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — Web Catalog</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admin">
+  <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html"><span class="logo-mark">TB</span><span class="logo-text">TechBlog</span></a><button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="main-nav"><a href="index.html">Beranda</a><a href="articles.html">Artikel</a><a href="category.html">Kategori</a><a href="about.html">Tentang &amp; Kontak</a><span id="auth-links"></span></nav><div class="header-actions"><button type="button" class="theme-toggle" aria-label="Toggle dark mode"><svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg><svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></div></div></header>
+  <main><section class="section"><div class="container admin-wrap"><header class="admin-topbar card"><div><p class="admin-kicker">ADMIN DASHBOARD</p><h1 class="mt-0">TechBlog Control Center</h1><p class="muted">Halo <span id="admin-user-name">Admin</span>, kelola konten secara terpusat.</p></div><div class="admin-topbar-actions"><span class="admin-date-pill" id="admin-date"></span><a class="btn btn-sm" href="articles.html">Kelola Artikel</a><a class="btn btn-outline btn-sm" href="index.html">Lihat Website</a></div></header><div class="admin-kpi-grid"><article class="admin-kpi-card card"><p class="admin-stat-label">Total Artikel</p><p class="admin-stat-value" id="kpi-articles">0</p></article><article class="admin-kpi-card card"><p class="admin-stat-label">Total User</p><p class="admin-stat-value" id="kpi-users">0</p></article><article class="admin-kpi-card card"><p class="admin-stat-label">Total Komentar</p><p class="admin-stat-value" id="kpi-comments">0</p></article><article class="admin-kpi-card card"><p class="admin-stat-label">Subscriber</p><p class="admin-stat-value" id="kpi-subs">0</p></article></div><div class="admin-layout"><div class="admin-primary"><article class="card admin-panel"><div class="admin-panel-head"><h3 class="mt-0">Artikel Terbaru</h3><span class="muted">5 data terakhir</span></div><div class="admin-list" id="admin-latest-articles"></div></article></div><aside class="admin-sidebar"><article class="card admin-panel"><div class="admin-panel-head"><h3 class="mt-0">Quick Actions</h3><span class="muted">akses cepat</span></div><div class="admin-action-stack"><a class="admin-action-tile" href="articles.html"><strong>Kelola Artikel</strong><p class="muted">Monitoring konten artikel.</p></a><a class="admin-action-tile" href="category.html"><strong>Kelola Kategori</strong><p class="muted">Atur struktur topik.</p></a><a class="admin-action-tile" href="author.html?id=2"><strong>Profil Admin</strong><p class="muted">Lihat profil admin.</p></a><a class="admin-action-tile" href="#" id="logout-link-fallback"><strong>Logout</strong><p class="muted">Keluar dari panel.</p></a></div></article></aside></div></div></section></main>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/static-site.js"></script>
+  <script>
+    document.getElementById('logout-link-fallback').addEventListener('click', function (e) {
+      e.preventDefault();
+      localStorage.removeItem('wc_current_user');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

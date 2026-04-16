@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nama": "Admin Erin",
+      "user": "admin@techblog.local",
+      "password": "erin07",
+      "role": "admin",
+      "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
+      "bio": "Editor & pendiri TechBlog."
+    },
+    {
+      "id": 2,
+      "nama": "Erin Susnita",
+      "user": "erinsusnita",
+      "password": "erin07",
+      "role": "admin",
+      "foto": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+      "bio": "Penulis fokus AI & etika teknologi."
+    },
+    {
+      "id": 3,
+      "nama": "Rei Pratama",
+      "user": "reipratama",
+      "password": "erin07",
+      "role": "penulis",
+      "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+      "bio": "Developer & kontributor programming."
+    },
+    {
+      "id": 4,
+      "nama": "Ersya Team",
+      "user": "ersyateam",
+      "password": "erin07",
+      "role": "penulis",
+      "foto": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
+      "bio": "Jurnalis gadget & startup."
+    }
+  ],
+  "categories": [
+    { "id": 1, "nama_kategori": "AI", "slug": "ai" },
+    { "id": 2, "nama_kategori": "Programming", "slug": "programming" },
+    { "id": 3, "nama_kategori": "Gadget", "slug": "gadget" },
+    { "id": 4, "nama_kategori": "Cyber Security", "slug": "cyber-security" },
+    { "id": 5, "nama_kategori": "Startup", "slug": "startup" }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "judul": "Perkembangan AI di Tahun 2025: Peluang dan Tantangan",
+      "slug": "perkembangan-ai-di-tahun-2025-peluang-dan-tantangan",
+      "konten": "<p>Artificial Intelligence terus berkembang pesat di berbagai sektor industri.</p><p>Tahun 2025 menunjukkan lonjakan adopsi AI generatif pada bisnis, edukasi, dan media.</p><p>Kunci sukses adopsi adalah keseimbangan antara inovasi dan etika penggunaan data.</p>",
+      "excerpt": "Tren generative AI, dampak ke dunia kerja, dan isu etika teknologi di tahun 2025.",
+      "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
+      "author_id": 2,
+      "kategori_id": 1,
+      "tanggal_publish": "2025-03-15 10:00:00",
+      "views": 1240,
+      "featured": 1
+    },
+    {
+      "id": 2,
+      "judul": "Tips Menulis Kode JavaScript yang Lebih Bersih",
+      "slug": "tips-menulis-kode-javascript-yang-lebih-bersih",
+      "konten": "<p>Kode yang mudah dibaca mengurangi bug dan mempercepat onboarding tim.</p><p>Gunakan struktur modul yang rapi, naming konsisten, dan refactor kecil berkala.</p>",
+      "excerpt": "Praktik struktur modul, penamaan, dan refactor untuk JS skala tim.",
+      "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop",
+      "author_id": 3,
+      "kategori_id": 2,
+      "tanggal_publish": "2025-03-20 14:30:00",
+      "views": 890,
+      "featured": 1
+    },
+    {
+      "id": 3,
+      "judul": "Review Smartphone Flagship: Apa yang Layak di 2025?",
+      "slug": "review-smartphone-flagship-apa-yang-layak-di-2025",
+      "konten": "<p>Pilih flagship berdasarkan pola pakai, bukan hanya benchmark.</p><ul><li>Prioritaskan update software</li><li>Cek kualitas layar outdoor</li><li>Uji konektivitas harian</li></ul>",
+      "excerpt": "Kriteria memilih flagship: software, layar, dan kebutuhan nyata.",
+      "thumbnail": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&h=630&fit=crop",
+      "author_id": 4,
+      "kategori_id": 3,
+      "tanggal_publish": "2025-03-22 09:00:00",
+      "views": 2100,
+      "featured": 1
+    },
+    {
+      "id": 4,
+      "judul": "Keamanan Siber untuk UMKM: Mulai dari Mana?",
+      "slug": "keamanan-siber-untuk-umkm-mulai-dari-mana",
+      "konten": "<p>UMKM sering menjadi target serangan digital karena pertahanan yang belum matang.</p><p>Mulai dari backup rutin, edukasi phishing, dan autentikasi ganda.</p>",
+      "excerpt": "Langkah praktis keamanan siber untuk bisnis kecil.",
+      "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=630&fit=crop",
+      "author_id": 3,
+      "kategori_id": 4,
+      "tanggal_publish": "2025-03-25 11:15:00",
+      "views": 756,
+      "featured": 0
+    },
+    {
+      "id": 5,
+      "judul": "Startup Teknologi di Indonesia: Momentum dan Risiko",
+      "slug": "startup-teknologi-di-indonesia-momentum-dan-risiko",
+      "konten": "<p>Ekosistem startup Indonesia terus tumbuh dengan dukungan modal dan talenta.</p><p>Fokus pada retensi pengguna dan unit economics tetap paling penting.</p>",
+      "excerpt": "Gambaran singkat momentum startup tech dan risiko yang perlu diwaspadai.",
+      "thumbnail": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&h=630&fit=crop",
+      "author_id": 4,
+      "kategori_id": 5,
+      "tanggal_publish": "2025-03-28 16:45:00",
+      "views": 445,
+      "featured": 0
+    }
+  ],
+  "comments": [
+    {
+      "article_id": 1,
+      "name": "Ersya Team",
+      "text": "Artikelnya ringkas dan relevan untuk diskusi tim kami. Terima kasih!",
+      "time": "2025-03-16 08:00:00"
+    }
+  ]
+}
